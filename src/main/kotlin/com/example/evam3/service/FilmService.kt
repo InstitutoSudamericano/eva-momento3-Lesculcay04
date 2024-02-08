@@ -38,6 +38,7 @@ class FilmService {
             throw ResponseStatusException(HttpStatus.NOT_FOUND,ex.message)
         }
     }
+    //agred
     fun delete (id: Long?):Boolean?{
         try{
             val response = filmRepository.findById(id)
