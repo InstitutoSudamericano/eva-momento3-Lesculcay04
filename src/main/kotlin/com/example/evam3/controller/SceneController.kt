@@ -1,37 +1,38 @@
 package com.example.evam3.controller
 
-import com.example.evam3.entity.Film
-import com.example.evam3.service.FilmService
+
+import com.example.evam3.entity.Scene
+import com.example.evam3.service.SceneService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
 @RestController
-@RequestMapping("/film")
+@RequestMapping("/scene")
 @CrossOrigin(methods = [RequestMethod.GET, RequestMethod.POST, RequestMethod.PATCH, RequestMethod.PUT, RequestMethod.DELETE])
-class FilmController {
+class SceneController {
     @Autowired
-    lateinit var filmService: FilmService
+    lateinit var sceneService: SceneService
 
     @GetMapping
     fun list (): ResponseEntity<*> {
-        return ResponseEntity(filmService.list(), HttpStatus.OK)
+        return ResponseEntity(sceneService.list(), HttpStatus.OK)
     }
 
     @PostMapping
-    fun save (@RequestBody film: Film): ResponseEntity<*> {
-        return ResponseEntity<Film>(filmService.save(film), HttpStatus.CREATED)
+    fun save (@RequestBody scene: Scene): ResponseEntity<*> {
+        return ResponseEntity<Scene>(sceneService.save(scene), HttpStatus.CREATED)
     }
 
     @PutMapping
-    fun update (@RequestBody film: Film):ResponseEntity<Film>{
-        return ResponseEntity(filmService.update(film), HttpStatus.OK)
+    fun update (@RequestBody scene: Scene):ResponseEntity<Scene>{
+        return ResponseEntity(sceneService.update(scene), HttpStatus.OK)
     }
 
     @DeleteMapping("/delete/{id}")
     fun delete (@PathVariable("id") id: Long):Boolean?{
-        return filmService.     delete(id)
+        return sceneService.delete(id)
     }
 
 }

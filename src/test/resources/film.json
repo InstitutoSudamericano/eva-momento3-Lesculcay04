@@ -1,0 +1,14 @@
+{
+  "title": "Your Film Title",
+  "director": "Director Name",
+  "duration": 120,
+  "country": "Country Name",
+  "ticketOffice": 1000000.0,
+  "presale": 50000,
+  "puntuation": 8.5,
+  "gender": "Action",
+  "year": "2023-01-01",
+  "writer": "Writer Name",
+  "investment": 5000000,
+  "synopsis": "Film Synopsis"
+}

@@ -1,0 +1,10 @@
+{
+  "id":"",
+  "description": "String? = null",
+  "budget": "Long? = null",
+  "special_effects": "Boolean? = null"
+  "costOfTheSuit": "Double? = null"
+  "makeupCost": "Double? = null"
+  "numberOfFilms": "Long? = null"
+  "filmId": "Long? = null"
+}
